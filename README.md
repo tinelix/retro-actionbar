@@ -1,10 +1,8 @@
-# Action Bar for Android
+# Retro Action Bar for Android
 
-**Note** This library is deprecated, use either [v7 appcompat library](http://developer.android.com/tools/support-library/features.html#v7) or [ActionBarSherlock](http://actionbarsherlock.com/).
+**Note:** This library based on [Johan Nilsson's ActionBar](https://github.com/johannilsson/android-actionbar) with improvements.
 
 ---
-
-![ActionBar for Android](http://markupartist.com/images/actionbar.png "ActionBar for Android")
 
 This projects aims to provide a reusable action bar component. The action bar pattern is well documented at [Android Patterns](http://www.androidpatterns.com/uap_pattern/action-bar).
 
@@ -124,7 +122,8 @@ In short that is;
 Have fun and remember we do this in our spare time so don't be too serious :)
 
 ## License
-Copyright (c) 2010 [Johan Nilsson](http://markupartist.com)
+Copyright (c) 2010 [Johan Nilsson](http://markupartist.com)\
+Copyright (c) 2022 [Dmitry Tretyakov](https://tinelix.ru)
 
 Licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
 
