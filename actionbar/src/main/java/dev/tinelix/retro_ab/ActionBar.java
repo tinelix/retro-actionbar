@@ -335,6 +335,25 @@ public class ActionBar extends RelativeLayout implements OnClickListener {
         }
     }
 
+    public void setCustomView(View view) {
+        LinearLayout custom_layout = findViewById(R.id.custom_layout);
+        if(view != null) {
+            findViewById(R.id.actionbar_home_btn).setVisibility(GONE);
+            int ab_height = this.getLayoutParams().height;
+            if (custom_layout.getChildCount() == 0) {
+                custom_layout.addView(view, 0);
+            } else if(view != getChildAt(0)) {
+                custom_layout.removeViewAt(0);
+                custom_layout.addView(view, 0);
+            }
+            custom_layout.setVisibility(VISIBLE);
+            findViewById(R.id.actionbar_title_container).setVisibility(GONE);
+        } else {
+            findViewById(R.id.actionbar_home_btn).setVisibility(VISIBLE);
+            custom_layout.setVisibility(GONE);
+        }
+    }
+
     /*
     public static abstract class SearchAction extends AbstractAction {
         public SearchAction() {
