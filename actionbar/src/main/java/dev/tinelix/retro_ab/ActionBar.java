@@ -18,8 +18,6 @@ package dev.tinelix.retro_ab;
 
 import java.util.LinkedList;
 
-import dev.tinelix.retro_ab.R;
-
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
@@ -36,8 +34,11 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import dev.tinelix.retro_pm.PopupMenu;
+
 public class ActionBar extends RelativeLayout implements OnClickListener {
 
+    private final Context mContext;
     private LayoutInflater mInflater;
     private RelativeLayout mBarView;
     private ImageView mLogoView;
@@ -52,6 +53,7 @@ public class ActionBar extends RelativeLayout implements OnClickListener {
 
     public ActionBar(Context context, AttributeSet attrs) {
         super(context, attrs);
+        this.mContext = context;
 
         mInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
@@ -295,6 +297,37 @@ public class ActionBar extends RelativeLayout implements OnClickListener {
             try {
                mContext.startActivity(mIntent); 
             } catch (ActivityNotFoundException e) {
+                Toast.makeText(mContext,
+                        mContext.getText(R.string.actionbar_activity_not_found),
+                        Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
+
+    public static class PopupMenuAction extends AbstractAction {
+        private final CharSequence mTitle;
+        private Context mContext;
+        private Intent mIntent;
+        private PopupMenu.OnItemSelectedListener mItemListener;
+
+        public PopupMenuAction(Context context, CharSequence title, int drawable, PopupMenu.OnItemSelectedListener mItemListener) {
+            super(drawable);
+            mContext = context;
+            mTitle = title;
+            this.mItemListener = mItemListener;
+        }
+
+        @Override
+        public void performAction(View view) {
+            try {
+                if(mContext != null) {
+                    PopupMenu menu = new PopupMenu(mContext);
+                    menu.setHeaderTitle(mTitle);
+                    menu.setOnItemSelectedListener(mItemListener);
+                    menu.add(0, R.string.app_name);
+                    menu.show(view);
+                }
+            } catch (Exception e) {
                 Toast.makeText(mContext,
                         mContext.getText(R.string.actionbar_activity_not_found),
                         Toast.LENGTH_SHORT).show();

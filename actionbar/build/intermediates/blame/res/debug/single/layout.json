@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "E:\\tretdm\\Downloads\\Stuff\\GitHub\\OldSchoolActionBar\\actionbar\\build\\intermediates\\res\\merged\\debug\\layout\\actionbar_item.xml",
+        "source": "E:\\tretdm\\Downloads\\Stuff\\GitHub\\OldSchoolActionBar\\actionbar\\src\\main\\res\\layout\\actionbar_item.xml"
+    },
+    {
+        "merged": "E:\\tretdm\\Downloads\\Stuff\\GitHub\\OldSchoolActionBar\\actionbar\\build\\intermediates\\res\\merged\\debug\\layout\\menu_list_item.xml",
+        "source": "E:\\tretdm\\Downloads\\Stuff\\GitHub\\OldSchoolActionBar\\popupmenu\\build\\intermediates\\bundles\\default\\res\\layout\\menu_list_item.xml"
+    },
+    {
+        "merged": "E:\\tretdm\\Downloads\\Stuff\\GitHub\\OldSchoolActionBar\\actionbar\\build\\intermediates\\res\\merged\\debug\\layout\\actionbar.xml",
+        "source": "E:\\tretdm\\Downloads\\Stuff\\GitHub\\OldSchoolActionBar\\actionbar\\src\\main\\res\\layout\\actionbar.xml"
+    },
+    {
+        "merged": "E:\\tretdm\\Downloads\\Stuff\\GitHub\\OldSchoolActionBar\\actionbar\\build\\intermediates\\res\\merged\\debug\\layout\\popup_menu.xml",
+        "source": "E:\\tretdm\\Downloads\\Stuff\\GitHub\\OldSchoolActionBar\\popupmenu\\build\\intermediates\\bundles\\default\\res\\layout\\popup_menu.xml"
+    }
+]

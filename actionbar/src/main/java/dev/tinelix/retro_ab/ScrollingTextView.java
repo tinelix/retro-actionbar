@@ -1,5 +1,6 @@
 package dev.tinelix.retro_ab;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Rect;
 import android.util.AttributeSet;
@@ -14,6 +15,7 @@ import android.widget.TextView;
  * Original code written by Evan Cummings:
  * http://androidbears.stellarpc.net/?p=185
  */
+@SuppressLint("AppCompatCustomView")
 public class ScrollingTextView extends TextView {
 
 	public ScrollingTextView(Context context, AttributeSet attrs,
