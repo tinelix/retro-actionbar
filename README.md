@@ -122,7 +122,7 @@ In short that is;
 Have fun and remember we do this in our spare time so don't be too serious :)
 
 ## License
-Copyright (c) 2010 [Johan Nilsson](http://markupartist.com)
+Copyright (c) 2010 [Johan Nilsson](http://markupartist.com)\
 Copyright (c) 2022 [Dmitry Tretyakov](https://tinelix.ru)
 
 Licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
