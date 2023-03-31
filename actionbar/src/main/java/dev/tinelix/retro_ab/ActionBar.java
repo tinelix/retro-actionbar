@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.markupartist.android.widget;
+package dev.tinelix.retro_ab;
 
 import java.util.LinkedList;
 
-import com.markupartist.android.widget.actionbar.R;
+import dev.tinelix.retro_ab.R;
 
 import android.content.ActivityNotFoundException;
 import android.content.Context;
@@ -44,6 +44,7 @@ public class ActionBar extends RelativeLayout implements OnClickListener {
     private View mBackIndicator;
     //private View mHomeView;
     private TextView mTitleView;
+    private TextView mSubtitleView;
     private LinearLayout mActionsView;
     private ImageButton mHomeBtn;
     private RelativeLayout mHomeLayout;
@@ -63,6 +64,7 @@ public class ActionBar extends RelativeLayout implements OnClickListener {
         mBackIndicator = mBarView.findViewById(R.id.actionbar_home_is_back);
 
         mTitleView = (TextView) mBarView.findViewById(R.id.actionbar_title);
+        mSubtitleView = (TextView) mBarView.findViewById(R.id.actionbar_subtitle);
         mActionsView = (LinearLayout) mBarView.findViewById(R.id.actionbar_actions);
         
         mProgress = (ProgressBar) mBarView.findViewById(R.id.actionbar_progress);
@@ -116,6 +118,14 @@ public class ActionBar extends RelativeLayout implements OnClickListener {
 
     public void setTitle(int resid) {
         mTitleView.setText(resid);
+    }
+
+    public void setSubtitle(CharSequence subtitle) {
+        mSubtitleView.setText(subtitle);
+    }
+
+    public void setSubtitle(int resid) {
+        mSubtitleView.setText(resid);
     }
 
     /**

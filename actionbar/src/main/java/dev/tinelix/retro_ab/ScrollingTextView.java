@@ -1,4 +1,4 @@
-package com.markupartist.android.widget;
+package dev.tinelix.retro_ab;
 
 import android.content.Context;
 import android.graphics.Rect;

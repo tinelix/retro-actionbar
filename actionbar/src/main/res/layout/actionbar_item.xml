@@ -13,11 +13,12 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<resources>
-    <color name="actionbar_separator">#8B1A1A</color>
-    <color name="actionbar_title">#FFFFFF</color>
-    <color name="actionbar_background_start">#8B1A1A</color>
-    <color name="actionbar_background_end">#CD2626</color>
-    <color name="actionbar_background_item_pressed_start">#FF7F00</color>
-    <color name="actionbar_background_item_pressed_end">#EE7600</color>
-</resources>
+<ImageButton xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/actionbar_item"
+    style="@style/ActionBarItem"
+    android:layout_centerVertical="true"
+    android:adjustViewBounds="true"
+    android:background="@null"
+    android:scaleType="fitCenter"
+    android:singleLine="true"
+    android:visibility="visible" />
