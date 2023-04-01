@@ -68,7 +68,7 @@ public class ActionBar extends RelativeLayout implements OnClickListener {
         mTitleView = (TextView) mBarView.findViewById(R.id.actionbar_title);
         mSubtitleView = (TextView) mBarView.findViewById(R.id.actionbar_subtitle);
         mActionsView = (LinearLayout) mBarView.findViewById(R.id.actionbar_actions);
-        
+
         mProgress = (ProgressBar) mBarView.findViewById(R.id.actionbar_progress);
 
         TypedArray a = context.obtainStyledAttributes(attrs,
@@ -93,10 +93,10 @@ public class ActionBar extends RelativeLayout implements OnClickListener {
 
     /**
      * Shows the provided logo to the left in the action bar.
-     * 
+     *
      * This is meant to be used instead of the setHomeAction and does not draw
      * a divider to the left of the provided logo.
-     * 
+     *
      * @param resId The drawable resource id
      */
     public void setHomeLogo(int resId) {
@@ -128,11 +128,14 @@ public class ActionBar extends RelativeLayout implements OnClickListener {
 
     public void setSubtitle(int resid) {
         mSubtitleView.setText(resid);
+        if(getResources().getString(resid).length() > 0)
+            mSubtitleView.setVisibility(VISIBLE);
+        else mSubtitleView.setVisibility(GONE);
     }
 
     /**
      * Set the enabled state of the progress bar.
-     * 
+     *
      * @param One of {@link View#VISIBLE}, {@link View#INVISIBLE},
      *   or {@link View#GONE}.
      */
@@ -142,7 +145,7 @@ public class ActionBar extends RelativeLayout implements OnClickListener {
 
     /**
      * Returns the visibility status for the progress bar.
-     * 
+     *
      * @param One of {@link View#VISIBLE}, {@link View#INVISIBLE},
      *   or {@link View#GONE}.
      */
@@ -152,7 +155,7 @@ public class ActionBar extends RelativeLayout implements OnClickListener {
 
     /**
      * Function to set a click listener for Title TextView
-     * 
+     *
      * @param listener the onClickListener
      */
     public void setOnTitleClickListener(OnClickListener listener) {
@@ -295,7 +298,7 @@ public class ActionBar extends RelativeLayout implements OnClickListener {
         @Override
         public void performAction(View view) {
             try {
-               mContext.startActivity(mIntent); 
+               mContext.startActivity(mIntent);
             } catch (ActivityNotFoundException e) {
                 Toast.makeText(mContext,
                         mContext.getText(R.string.actionbar_activity_not_found),
@@ -319,19 +322,21 @@ public class ActionBar extends RelativeLayout implements OnClickListener {
 
         @Override
         public void performAction(View view) {
-            try {
-                if(mContext != null) {
-                    PopupMenu menu = new PopupMenu(mContext);
-                    menu.setHeaderTitle(mTitle);
-                    menu.setOnItemSelectedListener(mItemListener);
-                    menu.add(0, R.string.app_name);
-                    menu.show(view);
-                }
-            } catch (Exception e) {
-                Toast.makeText(mContext,
-                        mContext.getText(R.string.actionbar_activity_not_found),
-                        Toast.LENGTH_SHORT).show();
-            }
+//            doesn't not work yet
+//
+//            try {
+//                if(mContext != null) {
+//                    PopupMenu menu = new PopupMenu(mContext);
+//                    menu.setHeaderTitle(mTitle);
+//                    menu.setOnItemSelectedListener(mItemListener);
+//                    menu.add(0, R.string.app_name);
+//                    menu.show(view);
+//                }
+//            } catch (Exception e) {
+//                Toast.makeText(mContext,
+//                        mContext.getText(R.string.actionbar_activity_not_found),
+//                        Toast.LENGTH_SHORT).show();
+//            }
         }
     }
 
