@@ -14,7 +14,7 @@ Need icons to your action bar? Olof Brickarp has ported some of [Androids native
 
 ### In your layout
 
-    <com.markupartist.android.widget.ActionBar
+    <dev.tinelix.retro_ab.ActionBar
 	    android:id="@+id/actionbar"
 	    app:title="@string/some_title"
 	    style="@style/ActionBar"
