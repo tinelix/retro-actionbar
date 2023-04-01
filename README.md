@@ -1,4 +1,4 @@
-# Retro Action Bar for Android
+# Retro-ActionBar for Android
 
 **Note:** This library based on [Johan Nilsson's ActionBar](https://github.com/johannilsson/android-actionbar) with improvements.
 
