@@ -23,7 +23,6 @@
         android:id="@+id/custom_layout"
         android:layout_width="match_parent"
         android:layout_height="@dimen/actionbar_height"
-        android:layout_toRightOf="@+id/actionbar_actions"
         android:gravity="center_vertical"
         android:orientation="horizontal"
         android:visibility="gone" />
@@ -42,8 +41,7 @@
             style="@style/ActionBarHomeLogo"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/actionbar_height"
-            android:layout_marginLeft="8dp"
-            android:layout_toEndOf="@+id/actionbar_home_is_back"
+            android:layout_marginLeft="10dp"
             android:adjustViewBounds="true"
             android:background="@null"
             android:scaleType="fitCenter"
@@ -70,11 +68,11 @@
         <ImageView
             android:id="@+id/actionbar_home_is_back"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_alignParentTop="true"
-            android:layout_toLeftOf="@+id/actionbar_home_btn"
-            android:background="@drawable/actionbar_back_indicator"
             android:padding="0dip"
+            android:scaleType="center"
+            android:src="@drawable/actionbar_back_indicator"
             android:visibility="gone" />
 
         <LinearLayout
