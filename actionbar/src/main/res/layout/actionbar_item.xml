@@ -19,6 +19,5 @@
     android:layout_centerVertical="true"
     android:adjustViewBounds="true"
     android:background="@null"
-    android:scaleType="fitCenter"
     android:singleLine="true"
     android:visibility="visible" />
