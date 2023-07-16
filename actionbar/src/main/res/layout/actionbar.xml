@@ -156,8 +156,8 @@
 
                 <ImageButton
                     android:id="@+id/actionbar_right_logo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="@dimen/actionbar_height"
+                    android:layout_height="@dimen/actionbar_height"
                     android:layout_alignParentRight="false"
                     android:background="@null"
                     android:src="@drawable/icon"
