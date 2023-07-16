@@ -161,6 +161,7 @@
                     android:layout_alignParentRight="false"
                     android:background="@null"
                     android:src="@drawable/icon"
+                    android:scaleType="fitCenter"
                     android:visibility="gone" />
 
             </LinearLayout>
