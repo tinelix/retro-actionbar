@@ -96,7 +96,7 @@ public class ActionBar extends RelativeLayout implements OnClickListener {
     }
 
     /**
-     * Shows the provided logo to the left in the action bar.
+     * Shows the provided logo to the left or right in the action bar.
      *
      * This is meant to be used instead of the setHomeAction and does not draw
      * a divider to the left of the provided logo.
@@ -114,6 +114,11 @@ public class ActionBar extends RelativeLayout implements OnClickListener {
         mLogoView.setImageDrawable(bitmapDrawable);
         mLogoView.setVisibility(View.VISIBLE);
         mHomeLayout.setVisibility(View.GONE);
+    }
+
+    public void setRightLogo(int resId) {
+        mRightLogoView.setImageResource(resId);
+        mRightLogoView.setVisibility(View.VISIBLE);
     }
 
     public void setRightLogo(BitmapDrawable bitmapDrawable) {
